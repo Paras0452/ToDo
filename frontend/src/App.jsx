@@ -11,7 +11,20 @@ function App() {
   return (
   <div>
     <CreateTodo></CreateTodo>
-    <Todos></Todos>
+    <Todos todos = {
+      [
+        {
+          title : "Go to Gym",
+          description : "Go daily for two hours",
+          completed: false
+        },
+        {
+          title : "Go to Gym",
+          description : "Go daily for two hours",
+          completed: false
+        }
+      ]
+    }></Todos>
   </div>
   )
 }
