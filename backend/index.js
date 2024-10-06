@@ -1,8 +1,9 @@
 const express = require("express")
 const { createTodo, updateTodo } = require("./types")
 const { todo } = require("./db.js")
+const cors = require("cors")
 const app = express()
-
+app.use(cors());
 app.use(express.json())
 
 app.get("/todos", async function (req, res) {
@@ -21,7 +22,7 @@ app.put("/completed", async function (req, res) {
         })
         return
     }
-    await todo.update({
+    await todo.updateOne({
         _id: req.body.id
     }, {
         completed: true
