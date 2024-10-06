@@ -8,3 +8,7 @@ export function CreateTodo(){
         </div>
     )
 }
+
+// module.exports = {
+//     CreateTodo : CreateTodo
+// } Another way
